@@ -23,7 +23,7 @@ module.exports = {
     API_URL: API_URL,
     WTAT_THIS_APP:"intelligentfunvdo",
     WTAT_THIS_APP_TYPE:"intelligentfunvdo",
-    WTAT_THIS_FILE_PREFIX: "http://assets.niceenjoy.com/",
+    WTAT_THIS_FILE_PREFIX: "http://assets.intelligentfunvdo.com/",
 
   },
   head: {

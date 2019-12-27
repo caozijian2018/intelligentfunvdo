@@ -108,7 +108,6 @@ export default {
   },
   computed:{
     all_load(){
-      debugger
       return this.all_type_arr.every((v)=>{return v.arr})
     },
   },
@@ -119,7 +118,7 @@ export default {
       })
     },
     toAll(key){
-      this.fullscreenLoading = true
+      this.fullscreenLoading = true;
       this.$router.push({
         path: "/classification/"+key
       });
@@ -148,6 +147,7 @@ export default {
           this.all_type_arr.push(item);
           this.getList(key);
         }
+        console.log(this.arr, this.all_type_arr,0);
         for(var key in this.all_type_arr){
           // this.getList(key);
         }
@@ -191,7 +191,6 @@ export default {
       });
     },
     getList(key) {
-      console.log(key)
       this.fullscreenLoading = true;
       var pg = this.page_;
       var sd = this.all_type_arr[key];
@@ -207,7 +206,6 @@ export default {
         this.fullscreenLoading = false;
         // this.all_type_arr[key].arr = res.results;
         this.$set(this.all_type_arr[key], 'arr', res.results)
-        console.log("xxxxxx");
         console.log(this.all_type_arr);
         // this.total = res.count;
         // this.page_ = this.$store.getters.getCatePage;
