@@ -19,7 +19,7 @@
     import getCountry from "../../util/get_country";
     import bus from "../../util/bus";
     import unlogin from "../../util/unlogin";
-    
+
     export default {
         data() {
             return {
@@ -44,7 +44,7 @@
                         {price: 200},
                         {pay_way: 1},
                     ],
-                    CallBackURL: 'https://humorboom.com/backend/twmk/transaction',
+                    CallBackURL: 'https://mygameparty.com/backend/twmk/transaction',
                     TimeStamp: this.formatTime()
                 },
             }

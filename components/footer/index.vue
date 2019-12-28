@@ -1,7 +1,7 @@
 <template>
     <div class="describeBox text_center font_size_15">
-        <!-- <a :href="'http://humorboom.com/?op='+platform" class="white">{{$t('words.home')}}</a>
-        <a class="white" :href="'http://static.humorboom.com/'+platform+'/terms.html'">-{{$t('words.terms')}}</a>
+        <!-- <a :href="'http://mygameparty.com/?op='+platform" class="white">{{$t('words.home')}}</a>
+        <a class="white" :href="'http://static.mygameparty.com/'+platform+'/terms.html'">-{{$t('words.terms')}}</a>
         <a href="#" class="white" @click="cancelSub" v-if="show_cancel"> - {{$t('words.cancel')}}</a> -->
     </div>
 </template>
@@ -9,7 +9,7 @@
 <script>
     import getCountry from "../../util/get_country"
     import go4url from "../../util/go4url"
-    
+
     export default {
         data() {
             return {
@@ -46,21 +46,21 @@
                 switch (platform) {
                     case "tw":
                         (() => {
-                            href_ = "http://static.humorboom.com/" + platform + "/cancel.html?phone=" + phone;
+                            href_ = "http://static.mygameparty.com/" + platform + "/cancel.html?phone=" + phone;
                             location.href = href_;
                         })();
                         break;
                     default:
                         (() => {
                             if (phone) {
-                                href_ = "http://static.humorboom.com/" + platform + "/cancel.html?phone=" + phone;
+                                href_ = "http://static.mygameparty.com/" + platform + "/cancel.html?phone=" + phone;
                                 location.href = href_;
                             } else {
                                 location.href = go4url("unlogin");
                             }
                         })();
                 }
-    
+
             },
         }
     }

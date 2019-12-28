@@ -15,10 +15,10 @@ var getBase64=() =>{
     var dreamfi;
     switch(country){
         case "pt": (()=>{
-            dreamfi="dreamfiiptapi"    
+            dreamfi="dreamfiiptapi"
         })();break;
         case "es": (()=>{
-            dreamfi="dreamfiiesapi"    
+            dreamfi="dreamfiiesapi"
         })();break;
     }
     return '&dcbAuth=' + Base64.encode(dreamfi + "#" + getIosTime() + "#"+getSubId());
@@ -34,10 +34,10 @@ export default (unlogin)=>{
     switch(country){
         case "pt": (()=>{
             dcbService="PRD_DREAMFII_PT_HUMORBOOM_GENERIC";
-            dcbReturnUrl="http://static.humorboom.com/pt/welcome.html"})();break;
+            dcbReturnUrl="http://static.mygameparty.com/pt/welcome.html"})();break;
         case "es": (()=>{
             dcbService="PRD_DREAMFII_ES_HUMORBOOM_PORTAL";
-            dcbReturnUrl="http://static.humorboom.com/es/subscribed.html"})();break;
+            dcbReturnUrl="http://static.mygameparty.com/es/subscribed.html"})();break;
     }
     var base_url = "http://wf.mobibox.pt/api/wbV2WebFlow/";
     base_url += "?dcbReturnUrl="+encodeURIComponent(dcbReturnUrl+islogin);
