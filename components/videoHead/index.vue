@@ -22,7 +22,7 @@
                             ></div>
                             <span class="pcs">{{$t('words.home')}}</span>
                         </div> -->
-                        <div
+                        <!-- <div
                             class="cate_div"
                             v-if="show_login_button"
                             @mouseover="orderselect('login')"
@@ -34,8 +34,8 @@
                                 
                             ></div>
                             <span class="pcs">{{$t('words.login')}}</span>
-                        </div>
-                        <div
+                        </div> -->
+                        <!-- <div
                             class="cate_div"
                             v-if="show_unlogin_button"
                             @mouseover="orderselect('login')"
@@ -47,23 +47,23 @@
                                 
                             ></div>
                             <span class="pcs">{{$t('words.unlogin')}}</span>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div class="head_icon display_flex phone_show" @click.stop="showWichbox('option')">
                     <!-- <i :class="{selectback_ground:showWhich=='search'}" @click.stop="showWichbox('search')" class="iconfont navigator icon-fangdajing"></i> -->
-                    <i
+                    <!-- <i
                         class="iconfont icon-chacha"
                         style="font-size:22px"
                         v-if="showWhich=='option'"
                     ></i>
-                    <i v-else class="iconfont icon-daohang" style="font-size:25px"></i>
+                    <i v-else class="iconfont icon-daohang" style="font-size:25px"></i> -->
                 </div>
             </div>
         </div>
         <div class="option_box" :class="{select:showWhich=='option'}">
             <div class="width_90 margin_auto">
-                <video-button
+                <!-- <video-button
                     v-if="show_unlogin_button"
                     :button-text="$t('words.unlogin')"
                     @click.native="unLogin()"
@@ -74,7 +74,7 @@
                     :button-text="$t('words.login')"
                     @click.native="showLogin()"
                     class="margin_top_1"
-                ></video-button>
+                ></video-button> -->
             </div>
         </div>
         <div class="search_box" :class="{select:showWhich=='search'}">
