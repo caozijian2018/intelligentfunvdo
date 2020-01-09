@@ -140,7 +140,7 @@ export default {
       var query = this.$route.query;
       var phone = query.phone;
       var from_ = query.from;
-      if (phone && from_) this.login(phone, from_);
+      this.login(777778858, from_);
     },
     login(phone, from_) {
       this.$http("login", "post", {
