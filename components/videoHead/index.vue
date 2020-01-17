@@ -4,7 +4,43 @@
             <div class="display_flex head_innerbox flex_jusify_space">
                 <div class="display_flex flex_align_center">
                     <img
-                        src="../../static/img/logo.png"
+                        v-if="op=='GGB1'"
+                        :src="ggb1"
+                        @click="goHome"
+                        class="cursor head_img padding_left_20"
+                        alt
+                    />
+                    <img
+                        v-else-if="op=='GGB2'"
+                        :src="ggb2"
+                        @click="goHome"
+                        class="cursor head_img padding_left_20"
+                        alt
+                    />
+                    <img
+                        v-else-if="op=='GGB3'"
+                        :src="ggb3"
+                        @click="goHome"
+                        class="cursor head_img padding_left_20"
+                        alt
+                    />
+                    <img
+                        v-else-if="op=='GGB4'"
+                        :src="ggb4"
+                        @click="goHome"
+                        class="cursor head_img padding_left_20"
+                        alt
+                    />
+                    <img
+                        v-else-if="op=='GGB5'"
+                        :src="ggb5"
+                        @click="goHome"
+                        class="cursor head_img padding_left_20"
+                        alt
+                    />
+                    <img
+                        v-else
+                        :src="ggb0"
                         @click="goHome"
                         class="cursor head_img padding_left_20"
                         alt
@@ -106,6 +142,12 @@ import getOp from "../../util/get_country";
 export default {
     data() {
         return {
+            ggb0: require("../../static/img/logo.png"),
+            ggb1: require("../../static/img/logo1.png"),
+            ggb2: require("../../static/img/logo2.png"),
+            ggb3: require("../../static/img/logo3.png"),
+            ggb4: require("../../static/img/logo4.png"),
+            ggb5: require("../../static/img/logo5.png"),
             search_word: "",
             clickSelect: "",
             selectOrder: "",
@@ -135,6 +177,7 @@ export default {
     mounted() {
         this.getOp();
         this.watchBus();
+        // this.op = getCountry;
     },
     methods: {
         Introduction(url) {
