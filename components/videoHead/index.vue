@@ -39,6 +39,14 @@
                         alt
                     />
                     <img
+                        v-else-if="op=='LesPeep'"
+                        :src="LesPeep"
+                        @click="goHome"
+                        class="cursor head_img padding_left_20"
+                        alt
+                    />
+                    
+                    <img
                         v-else
                         :src="ggb0"
                         @click="goHome"
@@ -148,6 +156,8 @@ export default {
             ggb3: require("../../static/img/logo3.png"),
             ggb4: require("../../static/img/logo4.png"),
             ggb5: require("../../static/img/logo5.png"),
+            LesPeep: require("../../static/img/logo6.png"),
+
             search_word: "",
             clickSelect: "",
             selectOrder: "",
