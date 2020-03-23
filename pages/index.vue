@@ -16,6 +16,14 @@
   init_token();
   export default {
     mounted() {
+      this.SetToken();
+    },
+    methods: {
+      SetToken(){
+        this.$http('get_file_pass_token/').then(res=>{
+          this.$store.state.file_token = res.file_token;
+        })
+      },
     }
   }
 </script>
